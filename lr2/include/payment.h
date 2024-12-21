@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class payment {
+class Payment {
 private:
     int payment_id;
     double amount;
@@ -13,7 +13,7 @@ private:
     string payment_method;
 
 public:
-    payment(int payment_id, double amount, time_t payment_date, const string& payment_method);
+    Payment(int payment_id, double amount, time_t payment_date, const string& payment_method);
 
     void display_payment_info() const;
     bool validate_payment() const;

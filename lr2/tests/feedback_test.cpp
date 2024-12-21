@@ -2,9 +2,14 @@
 #include "feedback.h"
 #include "client.h"
 
-// Тесты для класса feedback
+// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ feedback
 TEST(feedback_test, display_feedback) {
-    client c("charlie", "green", "123456789", "charlie@example.com");
-    feedback f(1, &c, 5, "great service!");
+    Client c("charlie", "green", "123456789", "charlie@example.com");
+    Feedback f(1, &c, 5, "great service!");
     EXPECT_NO_THROW(f.display_feedback());
+}
+
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }

@@ -5,17 +5,17 @@
 
 using namespace std;
 
-class repair {
+class Repair {
 private:
     int repair_id;
-    vehicle* vehicle_ptr; // Ассоциация с классом vehicle
+    Vehicle* vehicle_ptr; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ vehicle
     string issue_description;
     time_t start_date;
     time_t end_date;
     double cost;
 
 public:
-    repair(int repair_id, vehicle* vehicle_ptr, const string& issue_description, time_t start_date, time_t end_date, double cost);
+    Repair(int repair_id, Vehicle* vehicle_ptr, const string& issue_description, time_t start_date, time_t end_date, double cost);
 
     void display_repair_info() const;
     void finalize_repair();

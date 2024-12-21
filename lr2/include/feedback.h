@@ -5,16 +5,16 @@
 
 using namespace std;
 
-class feedback {
+class Feedback {
 private:
     int feedback_id;
-    client* client_ptr; // Ассоциация с классом client
+    Client* client_ptr; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ client
     int rating;
     string comment;
     time_t feedback_date;
 
 public:
-    feedback(int feedback_id, client* client_ptr, int rating, const string& comment);
+    Feedback(int feedback_id, Client* client_ptr, int rating, const string& comment);
 
     void display_feedback() const;
 };

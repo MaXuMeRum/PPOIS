@@ -6,15 +6,15 @@
 
 using namespace std;
 
-class location {
+class Location {
 private:
     int location_id;
     string address;
-    vector<vehicle> available_vehicles; // Ассоциация с классом vehicle
+    vector<Vehicle> available_vehicles; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ vehicle
 
 public:
-    location(int location_id, const string& address);
+    Location(int location_id, const string& address);
 
-    void add_vehicle(const vehicle& new_vehicle);
+    void add_vehicle(const Vehicle& new_vehicle);
     void display_location_info() const;
 };

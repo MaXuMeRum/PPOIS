@@ -4,14 +4,14 @@
 
 using namespace std;
 
-class user {
+class User {
 private:
     string username;
     string password;
     string role;
 
 public:
-    user(const string& username, const string& password, const string& role);
+    User(const string& username, const string& password, const string& role);
 
     bool validate_credentials(const string& username, const string& password) const;
     void display_user_info() const;

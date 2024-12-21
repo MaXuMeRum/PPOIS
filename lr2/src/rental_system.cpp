@@ -1,14 +1,14 @@
 #include "rental_system.h"
 
-void rental_system::add_client(const client& new_client) {
+void RentalSystem::add_client(const Client& new_client) {
     clients.push_back(new_client);
 }
 
-void rental_system::add_vehicle(const vehicle& new_vehicle) {
+void RentalSystem::add_vehicle(const Vehicle& new_vehicle) {
     vehicles.push_back(new_vehicle);
 }
 
-void rental_system::rent_vehicle(int client_index, int vehicle_index, time_t start_date, time_t end_date, double cost) {
+void RentalSystem::rent_vehicle(int client_index, int vehicle_index, time_t start_date, time_t end_date, double cost) {
     if (vehicle_index < 0 || vehicle_index >= vehicles.size() || client_index < 0 || client_index >= clients.size()) {
         cout << "Invalid client or vehicle index!" << endl;
         return;
@@ -23,13 +23,17 @@ void rental_system::rent_vehicle(int client_index, int vehicle_index, time_t sta
     cout << "Vehicle rented successfully!" << endl;
 }
 
-void rental_system::process_payment(const payment& new_payment) {
+void RentalSystem::process_payment(const Payment& new_payment) {
     payments.push_back(new_payment);
     cout << "Payment processed." << endl;
 }
 
-void rental_system::display_rentals() const {
+void RentalSystem::display_rentals() const {
     for (const auto& rental_info : rentals) {
         rental_info.display_rental_info();
     }
+}
+
+int RentalSystem::get_total_clients() const {
+    return this->clients.size();
 }

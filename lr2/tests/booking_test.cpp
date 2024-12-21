@@ -1,13 +1,35 @@
 #include <gtest/gtest.h>
+#include <iostream>
+#include <sstream>
 #include "client.h"
 #include "vehicle.h"
 #include "booking.h"
 
-// “ÂÒÚ˚ ‰Îˇ ÍÎ‡ÒÒ‡ booking
-TEST(booking_test, display_booking_info) {
-    client c("diana", "white");
-    vehicle v(1, "suv", "jeep", "wrangler", 2021, "green");
 
-    booking b(1, &c, &v, time(nullptr), time(nullptr) + 86400);
-    EXPECT_NO_THROW(b.display_booking_info());
+TEST(BookingTests, BookingWithValidClientAndVehicle) {
+    Client* client = new Client("John Doe", "123456789");
+    Vehicle* vehicle = new Vehicle(123, "Toyota", "Camry");
+    Booking* booking = new Booking(1, client, vehicle, time(nullptr), time(nullptr) + 86400);
+    EXPECT_NE(booking, nullptr);
+
+    std::ostringstream oss;
+    std::streambuf* p_cout_streambuf = std::cout.rdbuf();
+    std::cout.rdbuf(oss.rdbuf());
+
+    booking->display_booking_info();
+
+    std::cout.rdbuf(p_cout_streambuf); // –í–æ—Å—Å—Ç–∞–Ω–æ–≤–ª–µ–Ω–∏–µ –±—É—Ñ–µ—Ä–∞ std::cout
+    std::string output = oss.str();
+    EXPECT_NE(output,  "");
+
+    delete booking;
+    delete client;
+    delete vehicle;
+}
+
+
+
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }

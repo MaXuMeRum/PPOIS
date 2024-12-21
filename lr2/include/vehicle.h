@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class vehicle {
+class Vehicle {
 private:
     int id;
     string type;
@@ -16,7 +16,7 @@ private:
     bool is_available;
 
 public:
-    vehicle(int id, const string& type, const string& brand, const string& model, int year, const string& color, const string& registration_number);
+    Vehicle(int id = 0, const string& type = "", const string& brand = "", const string& model = "", int year = 0, const string& color = "", const string& registration_number = "");
 
     void display_details() const;
     void mark_as_rented();

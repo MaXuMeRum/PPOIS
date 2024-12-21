@@ -5,12 +5,12 @@
 
 using namespace std;
 
-class statistics {
+class Statistics {
 private:
-    vector<rental> rentals;
+    vector<Rental> rentals;
 
 public:
-    void add_rental(const rental& new_rental);
+    void add_rental(const Rental& new_rental);
     int get_total_rentals() const;
     double calculate_total_income() const;
 };

@@ -8,22 +8,22 @@
 
 using namespace std;
 
-class rental {
+class Rental {
 private:
     int rental_id;
-    client* client_ptr;
-    vehicle* vehicle_ptr;
-    payment* payment_ptr; // Ассоциация с классом payment
+    Client* client_ptr;
+    Vehicle* vehicle_ptr;
+    Payment* payment_ptr; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ payment
     time_t start_date;
     time_t end_date;
     double rental_cost;
 
 public:
-    rental(int rental_id, client* client_ptr, vehicle* vehicle_ptr, payment* payment_ptr, time_t start_date, time_t end_date, double rental_cost);
+    Rental(int rental_id, Client* client_ptr, Vehicle* vehicle_ptr, Payment* payment_ptr, time_t start_date, time_t end_date, double rental_cost);
 
     void display_rental_info() const;
     void calculate_rental_duration() const;
     void finalize_rental();
     void cancel_rental();
-    double get_total_cost() const; // Добавляем метод
+    double get_total_cost() const; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 };

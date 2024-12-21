@@ -6,17 +6,17 @@
 
 using namespace std;
 
-class booking {
+class Booking {
 private:
     int booking_id;
-    client* client_ptr; // Ассоциация с классом client
-    vehicle* vehicle_ptr; // Ассоциация с классом vehicle
+    Client* client_ptr; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ client
+    Vehicle* vehicle_ptr; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ vehicle
     time_t booking_date;
     time_t rental_start_date;
     time_t rental_end_date;
 
 public:
-    booking(int booking_id, client* client_ptr, vehicle* vehicle_ptr, time_t rental_start_date, time_t rental_end_date);
+    Booking(int booking_id, Client* client_ptr, Vehicle* vehicle_ptr, time_t rental_start_date, time_t rental_end_date);
 
     void display_booking_info() const;
 };

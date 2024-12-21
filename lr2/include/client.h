@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class client {
+class Client {
 private:
     string first_name;
     string last_name;
@@ -12,7 +12,7 @@ private:
     string email;
 
 public:
-    client(const string& first_name, const string& last_name, const string& phone_number, const string& email);
+    Client(const string& first_name = "", const string& last_name = "", const string& phone_number = "", const string& email = "");
 
     void update_contact_info(const string& new_phone, const string& new_email);
     void display_info() const;
