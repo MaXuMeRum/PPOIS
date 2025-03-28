@@ -8,7 +8,7 @@
 
 **Параметры:**
 
-1. `triangle_Struct_Addr` — sc-ссылка на структуру треугльника.
+1. `Central_Angle_Addr` — sc-ссылка на центральный угол.
 
 **Рабочий процесс:**
 
@@ -17,15 +17,16 @@
 
 Пример входных структур:
 
-<img src="C:\Users\RedmiBook\Desktop\r\1.png"></img>
+<img src="imgs/1.png"></img>
+<img src="imgs/2.png"></img>
 
 
 Пример выходной структуры:
 
-<img src="../FourthSem/FourthLabImages/output.png"></img>
+<img src="imgs/6.png"></img>
 
 ### Логическое правило агента
-<img src="../FourthSem/FourthLabImages/logic_rule_first.png"></img>
+<img src="imgs/5.png"></img>
 
 ### Результат
 
