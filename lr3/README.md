@@ -23,7 +23,7 @@
 
 Пример выходной структуры:
 
-<img src="../imgs/6.png"></img>
+<img src="../imgs/15.png"></img>
 
 ### Логическое правило агента
 <img src="../imgs/5.png"></img>
