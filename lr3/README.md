@@ -15,11 +15,9 @@
 * Агент action_generate_values_expression создает структуру используя формулу, а второй агент action_calculate_central_angle считает центральный угол
 ### Пример
 
-Пример входных структур:
+Пример входной структуры:
 
 <img src="../imgs/7.png"></img>
-<img src="../imgs/2.png"></img>
-
 
 Пример выходной структуры:
 
