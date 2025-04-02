@@ -1,6 +1,6 @@
 # Агент построения структуры
 
-Это агент, который находит центральный угол, с помощью action_generate_values_expression и action_calculate_central_angle.
+Агент, котрый создает структуру для action_calculate_central_angle
 
 **Класс действия:**
 
@@ -8,11 +8,11 @@
 
 **Параметры:**
 
-1. `Central_Angle_Addr` — sc-ссылка на центральный угол.
+1. `values_expr_Addr` — sc-ссылка на центральный угол.
 
 **Рабочий процесс:**
 
-* Агент action_generate_values_expression создает структуру используя формулу агент action_calculate_central_angle считает центральный угол
+* Агент action_generate_values_expression создает структуру используя формулу
 ### Пример
 
 Пример входной структуры:
@@ -35,11 +35,10 @@
 
 # Агент нахождения центрального угла
 
-Это агент, который находит центральный угол, с помощью action_generate_values_expression и action_calculate_central_angle.
-
+Это агент, который находит центральный угол с помощью структуры
 **Класс действия:**
 
-`action_generate_values_expression`
+`action_calculate_central_angle`
 
 **Параметры:**
 
